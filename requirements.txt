@@ -1,0 +1,4 @@
+gTTS
+wheel
+setuptools
+playsound
