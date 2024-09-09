@@ -31,8 +31,8 @@ rm -f ./.gitignore
 
 echo "$(date '+[%Y-%m-%d %H:%M:%S]') Creating the executable..."
 echo "clear" > ./CorrectMe.sh
-echo "cd "$APP_DIR"" >> ./CorrectMe.sh
-echo "python3 ./main.py" >> ./CorrectMe.sh
+echo "cd '$APP_DIR'" >> ./CorrectMe.sh
+echo "python3 ./bin/main.py" >> ./CorrectMe.sh
 chmod +x ./CorrectMe.sh
 
 echo "$(date '+[%Y-%m-%d %H:%M:%S]') Creating the shortcut..."
@@ -40,6 +40,7 @@ echo "[Desktop Entry]
 Name=Correct Me!
 Exec=sh -c '$APP_DIR/CorrectMe.sh'
 Terminal=true
+Icon=$APP_DIR/icon.ico
 Type=Application" > ./correct-me.desktop
 chmod +x ./correct-me.desktop
 mv ./correct-me.desktop "$HOME/.local/share/applications"
