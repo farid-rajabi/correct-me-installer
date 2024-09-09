@@ -1,4 +1,4 @@
-# Correct Me! Installer
+# Correct Me! Installer [![GitHub Release](https://img.shields.io/github/v/release/farid-rajabi/correct-me-installer)](https://github.com/farid-rajabi/correct-me-installer/releases/latest)
 
 A desktop installer to help with installation of [*Correct Me!*](https://github.com/farid-rajabi/correct-me).
 
@@ -35,10 +35,10 @@ A desktop installer to help with installation of [*Correct Me!*](https://github.
 
     1. Double click on *installer-windows.bat*.
 
-        > [!CAUTION]
-        > DO NOT run *installer-windows.bat* as an administrator.
-
     2. Wait until the "Installation is completed" message is printed in the cmd/powershell.
+
+> [!CAUTION]
+> DO NOT run *installer-windows.bat* as an administrator.
 
 > [!TIP]
 > Do not ignore the log. In case a problem occurs, the solution will be printed for you.
@@ -56,3 +56,9 @@ If you terminal/cmd/powershell tells you "pip3 command not found" or something s
 2. With respect to your OS, open *installer-linux.sh* or *installer-windows.bat* with a text editor.
 
 3. Search the file and replace every `pip3` with `pip`.
+
+## Test Results
+
+| Version | Configurations | Result |
+| --- | --- | --- |
+| 1.1.0 | ![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04.4_LTS-E95420?logo=ubuntu) ![Python](https://img.shields.io/badge/Python-3.10.12-3776AB?logo=python) ![GNU Bash](https://img.shields.io/badge/GNU_Bash-5.1.16-4EAA25?logo=gnubash) | ![Result](https://img.shields.io/badge/Passed-green) |
