@@ -66,7 +66,7 @@ DEL .gitignore
 ECHO [%DATE:~10,4%-%DATE:~4,2%-%DATE:~7,2% %TIME:~0,8%] Creating the executable...
 ECHO CLS > "%APP_DIR%\CorrectMe.bat"
 ECHO CD "%APP_DIR%" >> "%APP_DIR%\CorrectMe.bat"
-ECHO python .\main.py >> "%APP_DIR%\CorrectMe.bat"
+ECHO python .\bin\main.py >> "%APP_DIR%\CorrectMe.bat"
 
 ECHO [%DATE:~10,4%-%DATE:~4,2%-%DATE:~7,2% %TIME:~0,8%] Creating the shortcut...
 SET SCRIPT="%TEMP%\%RANDOM%-%RANDOM%-%RANDOM%-%RANDOM%.vbs"
@@ -74,6 +74,7 @@ ECHO Set oWS = WScript.CreateObject("WScript.Shell") >> %SCRIPT%
 ECHO sLinkFile = "%USERPROFILE%\Desktop\Correct Me!.lnk" >> %SCRIPT%
 ECHO Set oLink = oWS.CreateShortcut(sLinkFile) >> %SCRIPT%
 ECHO oLink.TargetPath = "%APP_DIR%\CorrectMe.bat" >> %SCRIPT%
+ECHO oLink.IconLocation = "%APP_DIR%\icon.ico"
 ECHO oLink.Save >> %SCRIPT%
 cscript /nologo %SCRIPT%
 DEL %SCRIPT%
